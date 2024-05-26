@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_ppb/ui/home_screen.dart';
 import 'package:project_ppb/ui/login.dart';
+import 'package:project_ppb/ui/main_page.dart';
 import 'package:project_ppb/ui/register.dart';
 
 MaterialPageRoute _pageRoute(
@@ -17,8 +18,8 @@ Route? generateRoute(RouteSettings settings) {
     case rRegister:
       _route = _pageRoute(body: RegisterScreen(), settings: settings);
       break;
-    case rHome:
-      _route = _pageRoute(body: HomeScreen(), settings: settings);
+    case rMain:
+      _route = _pageRoute(body: MainPage(), settings: settings);
       break;
   }
   return _route;
@@ -27,4 +28,4 @@ Route? generateRoute(RouteSettings settings) {
 final NAV_KEY = GlobalKey<NavigatorState>();
 const String rLogin = '/login';
 const String rRegister = '/register';
-const String rHome = '/home';
+const String rMain = '/main';

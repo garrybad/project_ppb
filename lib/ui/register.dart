@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project_ppb/bloc/register/register_cubit.dart';
+import 'package:project_ppb/styles/colors.dart';
+import 'package:project_ppb/styles/text_style.dart';
 
 import '../utils/routes.dart';
 
@@ -46,96 +48,169 @@ class _RegisterScreenState extends State<RegisterScreen> {
           }
         },
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 30, vertical: 70),
-          child: ListView(
+          color: kBgBlue,
+          width: double.infinity,
+          child: Column(
             children: [
-              Text(
-                "Register",
-                style: TextStyle(
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xff3D4DE0)),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Text(
-                "Silahkan masukan e-mail dan password anda",
-                style: TextStyle(
-                  fontSize: 16,
-                ),
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              Text(
-                "e-mail",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-              TextFormField(
-                controller: emailEdc,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                "password",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-              TextFormField(
-                controller: passEdc,
-                decoration: InputDecoration(
-                  suffixIcon: IconButton(
-                    icon: Icon(passInvisible
-                        ? Icons.visibility
-                        : Icons.visibility_off),
-                    onPressed: () {
-                      setState(() {
-                        passInvisible = !passInvisible;
-                      });
-                    },
+              Container(
+                height: MediaQuery.of(context).size.height * 0.5,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      SafeArea(child: Image(image: AssetImage('assets/images/project_logo.png'),)),
+                      Text('PKDI', style: kHeading5.copyWith(
+                          color: kBgWhite,
+                          fontWeight: FontWeight.w600
+                      ),),
+                    ],
                   ),
                 ),
-                obscureText: !passInvisible,
               ),
-              SizedBox(
-                height: 50,
-              ),
-              ElevatedButton(
-                  onPressed: () {
-                    context
-                        .read<RegisterCubit>()
-                        .register(email: emailEdc.text, password: passEdc.text);
-                  },
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xff3D4DE0),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10))),
-                  child: Text(
-                    "Register",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24,
-                        color: Colors.white),
-                  )),
-              SizedBox(
-                height: 25,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Sudah punya akun ?"),
-                  TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/login');
-                      },
+              Expanded(child:Container()),
+              Container(
+                decoration: BoxDecoration(
+                    color: kBgWhite,
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(40),
+                    )
+                ),
+                padding: EdgeInsets.only(
+                    left: 40,
+                    right: 40,
+                    top: 40
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Center(
                       child: Text(
-                        "Login",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xff3D4DE0)),
-                      ))
-                ],
+                        'Register',
+                        style: kHeading6.copyWith(
+                            color: kBgBlue,
+                            fontWeight: FontWeight.w600
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Text(
+                      "E-mail",
+                      style: kSubtitle1.copyWith(
+                        color: kBgBlack,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextFormField(
+                      controller: emailEdc,
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: kBgGray, width: 2.0),
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: kBgBlack, width: 2.0),
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        contentPadding: EdgeInsets.symmetric(horizontal: 20.0),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "Password",
+                      style: kSubtitle1.copyWith(
+                        color: kBgBlack,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextFormField(
+                      controller: passEdc,
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.symmetric(horizontal: 20.0),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: kBgGray, width: 2.0),
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: kBgBlack, width: 2.0),
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        suffixIcon: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                          child: IconButton(
+                            icon: Icon(passInvisible
+                                ? Icons.visibility
+                                : Icons.visibility_off),
+                            onPressed: () {
+                              setState(() {
+                                passInvisible = !passInvisible;
+                              });
+                            },
+                          ),
+                        ),
+                      ),
+                      obscureText: !passInvisible,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            // Navigator.pushNamed(context, '/home');
+                            context
+                                .read<RegisterCubit>()
+                                .register(email: emailEdc.text, password: passEdc.text);
+                          },
+                          style: ElevatedButton.styleFrom(
+                              padding: EdgeInsets.all(20),
+                              backgroundColor: kBgBlue,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(50))),
+                          child: Text(
+                            "Login",
+                            style: kHeading6.copyWith(
+                                color: kBgWhite,
+                                fontWeight: FontWeight.w600
+                            ),
+                          )),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Sudah punya akun ?",
+                          style: kSubtitle2.copyWith(
+                            color: kBgBlack,
+                          ),),
+                        TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/login');
+                            },
+                            child: Text(
+                              "Login",
+                              style: kSubtitle2.copyWith(
+                                color: kBgBlue,
+                              ),
+                            ))
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                  ],
+                ),
               )
             ],
           ),

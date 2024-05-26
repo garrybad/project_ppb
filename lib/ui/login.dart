@@ -1,8 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:project_ppb/bloc/login/login_cubit.dart';
+import 'package:project_ppb/styles/colors.dart';
+import 'package:project_ppb/styles/text_style.dart';
 import 'package:project_ppb/ui/phone_auth_screen.dart';
 import '../utils/routes.dart';
 import 'home_screen.dart';
@@ -58,132 +61,173 @@ class _LoginScreenState extends State<LoginScreen> {
                 content: Text(state.msg),
                 backgroundColor: Colors.green,
               ));
-            Navigator.pushNamedAndRemoveUntil(context, rHome, (route) => false);
+            Navigator.pushNamedAndRemoveUntil(context, rMain, (route) => false);
           }
         },
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 30, vertical: 70),
-          child: ListView(
+          color: kBgBlue,
+          width: double.infinity,
+          child: Column(
             children: [
-              Text(
-                "Login",
-                style: TextStyle(
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xff3D4DE0)),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Text(
-                "Silahkan masukan e-mail dan password anda",
-                style: TextStyle(
-                  fontSize: 16,
-                ),
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              Text(
-                "e-mail",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-              TextFormField(
-                controller: emailEdc,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                "password",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-              TextFormField(
-                controller: passEdc,
-                decoration: InputDecoration(
-                  suffixIcon: IconButton(
-                    icon: Icon(passInvisible
-                        ? Icons.visibility
-                        : Icons.visibility_off),
-                    onPressed: () {
-                      setState(() {
-                        passInvisible = !passInvisible;
-                      });
-                    },
+              Container(
+                height: MediaQuery.of(context).size.height * 0.5,
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      SafeArea(child: Image(image: AssetImage('assets/images/project_logo.png'),)),
+                      Text('PKDI', style: kHeading5.copyWith(
+                          color: kBgWhite,
+                          fontWeight: FontWeight.w600
+                      ),),
+                    ],
                   ),
                 ),
-                obscureText: !passInvisible,
               ),
-              SizedBox(
-                height: 50,
-              ),
-              ElevatedButton(
-                  onPressed: () {
-                    // Navigator.pushNamed(context, '/home');
-                    context
-                        .read<LoginCubit>()
-                        .login(email: emailEdc.text, password: passEdc.text);
-                  },
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xff3D4DE0),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10))),
-                  child: Text(
-                    "Login",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24,
-                        color: Colors.white),
-                  )),
-              const SizedBox(
-                height: 30.0,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      signInWithGoogle();
-                    },
-                    child: const CircleAvatar(
-                      radius: 20.0,
-                      backgroundImage: NetworkImage(
-                          'https://img2.pngdownload.id/20190228/qby/kisspng-google-logo-google-account-g-suite-google-images-g-icon-archives-search-png-5c77ad39b77471.9286340315513470017515.jpg'),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 30.0,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push( context, MaterialPageRoute( builder: (context) => PhoneAuthScreen()));
-                    },
-                    child: const CircleAvatar(
-                      radius: 20.0,
-                      backgroundImage: NetworkImage(
-                          'https://freepngimg.com/thumb/business/83615-blue-icons-symbol-telephone-computer-logo.png'),
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Belum punya akun ?"),
-                  TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/register');
-                      },
+              Expanded(child:Container()),
+              Container(
+                decoration: BoxDecoration(
+                    color: kBgWhite,
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(40),
+                    )
+                ),
+                padding: EdgeInsets.only(
+                    left: 40,
+                    right: 40,
+                    top: 40
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Center(
                       child: Text(
-                        "Daftar",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xff3D4DE0)),
-                      ))
-                ],
+                        'Login',
+                        style: kHeading6.copyWith(
+                            color: kBgBlue,
+                            fontWeight: FontWeight.w600
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Text(
+                      "E-mail",
+                      style: kSubtitle1.copyWith(
+                        color: kBgBlack,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextFormField(
+                      controller: emailEdc,
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: kBgGray, width: 2.0),
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: kBgBlack, width: 2.0),
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        contentPadding: EdgeInsets.symmetric(horizontal: 20.0),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "Password",
+                      style: kSubtitle1.copyWith(
+                          color: kBgBlack,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextFormField(
+                      controller: passEdc,
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.symmetric(horizontal: 20.0),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: kBgGray, width: 2.0),
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: kBgBlack, width: 2.0),
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        suffixIcon: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                          child: IconButton(
+                            icon: Icon(passInvisible
+                                ? Icons.visibility
+                                : Icons.visibility_off),
+                            onPressed: () {
+                              setState(() {
+                                passInvisible = !passInvisible;
+                              });
+                            },
+                          ),
+                        ),
+                      ),
+                      obscureText: !passInvisible,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            // Navigator.pushNamed(context, '/home');
+                            context
+                                .read<LoginCubit>()
+                                .login(email: emailEdc.text, password: passEdc.text);
+                          },
+                          style: ElevatedButton.styleFrom(
+                            padding: EdgeInsets.all(20),
+                              backgroundColor: kBgBlue,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(50))),
+                          child: Text(
+                            "Login",
+                            style: kHeading6.copyWith(
+                                color: kBgWhite,
+                                fontWeight: FontWeight.w600
+                            ),
+                          )),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Belum punya akun ?",
+                          style: kSubtitle2.copyWith(
+                            color: kBgBlack,
+                        ),),
+                        TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/register');
+                            },
+                            child: Text(
+                              "Daftar",
+                              style: kSubtitle2.copyWith(
+                                color: kBgBlue,
+                              ),
+                            ))
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                  ],
+                ),
               )
             ],
           ),

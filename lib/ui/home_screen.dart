@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "HOME SCREEN",
+            "HOME PAGE",
             style: TextStyle(
                 fontSize: 40,
                 fontWeight: FontWeight.bold,
