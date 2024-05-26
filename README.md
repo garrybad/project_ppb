@@ -1,4 +1,4 @@
-# firebase_auth
+# project_ppb
 
 A new Flutter project.
 
