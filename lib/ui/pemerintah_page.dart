@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:project_ppb/styles/colors.dart';
+import 'package:project_ppb/styles/text_style.dart';
 
 class PemerintahPage extends StatefulWidget {
   const PemerintahPage({super.key});
@@ -12,11 +14,15 @@ class _PemerintahPageState extends State<PemerintahPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Solusi Pemerintah'),
-        backgroundColor: Colors.blue,
+        automaticallyImplyLeading: false,
+        title: Text('Solusi Pemerintah',
+            style: kHeading5.copyWith(
+              color: kBgWhite,
+            )),
+        backgroundColor: kBgBlue,
       ),
       body: ListView(
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.fromLTRB(30, 10, 30, 30),
         children: <Widget>[
           _buildListItem(
             'assets/images/pendidikan.png', // Replace with your image
@@ -76,7 +82,7 @@ class _PemerintahPageState extends State<PemerintahPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           ClipRRect(
-            borderRadius: BorderRadius.vertical(top: Radius.circular(16.0)),
+            borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
             child: Image.asset(imagePath, fit: BoxFit.cover),
           ),
           Padding(
@@ -86,10 +92,14 @@ class _PemerintahPageState extends State<PemerintahPage> {
               children: <Widget>[
                 Text(
                   title,
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: kHeading6.copyWith(
+                    color: kBgBlack,
+                  ),
                 ),
                 SizedBox(height: 8.0),
-                Text(description),
+                Text(description, style: kBody2.copyWith(
+                  color: kBgBlack,
+                ),),
               ],
             ),
           ),

@@ -21,13 +21,13 @@ class _MainPageState extends State<MainPage> {
   static List<Widget> pages = [
     HomeScreen(),
     DonasiPage(),
+    BeritaPage(),
     PemerintahPage(),
     StatistikPage(),
-    BeritaPage(),
     ProfilePage(),
   ];
 
-  void _onItemTapped(int index){
+  void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -50,17 +50,10 @@ class _MainPageState extends State<MainPage> {
         // borderRadius: BorderRadius.vertical(
         //     top: Radius.circular(15)
         // ),
-        boxShadow: [
-          BoxShadow(
-              color: kGrey,
-              blurRadius: 10
-          )
-        ],
+        boxShadow: [BoxShadow(color: kGrey, blurRadius: 10)],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.vertical(
-            top: Radius.circular(15)
-        ),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           currentIndex: _selectedIndex,
@@ -70,12 +63,38 @@ class _MainPageState extends State<MainPage> {
           selectedItemColor: kBgBlue,
           unselectedItemColor: kDarkGray,
           items: [
-            BottomNavigationBarItem(icon: Image.asset('assets/icons/home.png', width: 24, color: _selectedIndex == 0 ? kBgBlue : kDarkGray,), label: 'Home'),
-            BottomNavigationBarItem(icon: Image.asset('assets/icons/donasi.png', width: 24, color: _selectedIndex == 1 ? kBgBlue : kDarkGray), label: 'Donasi'),
-            BottomNavigationBarItem(icon: Image.asset('assets/icons/pemerintah.png', width: 24, color: _selectedIndex == 2 ? kBgBlue : kDarkGray), label: 'Pemerintah'),
-            BottomNavigationBarItem(icon: Image.asset('assets/icons/statistik.png', width: 24, color: _selectedIndex == 3 ? kBgBlue : kDarkGray), label: 'Statistik'),
-            BottomNavigationBarItem(icon: Image.asset('assets/icons/berita.png', width: 24, color: _selectedIndex == 4 ? kBgBlue : kDarkGray), label: 'Berita'),
-            BottomNavigationBarItem(icon: Image.asset('assets/icons/profile.png', width: 24, color: _selectedIndex == 5 ? kBgBlue : kDarkGray), label: 'Profile'),
+            BottomNavigationBarItem(
+                icon: Image.asset(
+                  'assets/icons/home.png',
+                  width: 24,
+                  color: _selectedIndex == 0 ? kBgBlue : kDarkGray,
+                ),
+                label: 'Home'),
+            BottomNavigationBarItem(
+                icon: Image.asset('assets/icons/donasi.png',
+                    width: 24,
+                    color: _selectedIndex == 1 ? kBgBlue : kDarkGray),
+                label: 'Donasi'),
+            BottomNavigationBarItem(
+                icon: Image.asset('assets/icons/berita.png',
+                    width: 24,
+                    color: _selectedIndex == 2 ? kBgBlue : kDarkGray),
+                label: 'Berita'),
+            BottomNavigationBarItem(
+                icon: Image.asset('assets/icons/pemerintah.png',
+                    width: 24,
+                    color: _selectedIndex == 3 ? kBgBlue : kDarkGray),
+                label: 'Pemerintah'),
+            BottomNavigationBarItem(
+                icon: Image.asset('assets/icons/statistik.png',
+                    width: 24,
+                    color: _selectedIndex == 4 ? kBgBlue : kDarkGray),
+                label: 'Statistik'),
+            BottomNavigationBarItem(
+                icon: Image.asset('assets/icons/profile.png',
+                    width: 24,
+                    color: _selectedIndex == 5 ? kBgBlue : kDarkGray),
+                label: 'Profile'),
           ],
         ),
       ),
