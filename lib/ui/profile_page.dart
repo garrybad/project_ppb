@@ -99,46 +99,25 @@ class ProfilePage extends StatelessWidget {
                       child: Column(
                         children: [
                           Text(
-                            'Mari Berkenalan dengan PKDI Lebih Dalam',
+                            'Masa Depan Bebas Kemiskinan: Manfaatkan Kekuatan Teknologi',
                             style: kSubtitle1.copyWith(
                               color: kBgWhite,
                             ),
+                            textAlign: TextAlign.center,
                           ),
                           SizedBox(height: 10),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Row(
-                                children: [
-                                  Image.asset(
-                                    'assets/images/project_logo.png', // Ganti dengan path logo PKDI Anda
-                                    height: 24,
-                                  ),
-                                  SizedBox(width: 5),
-                                  Text(
-                                    'PKDI',
-                                    style: kBody1.copyWith(
-                                      color: kBgWhite,
-                                    ),
-                                  ),
-                                ],
+                              Image.asset(
+                                'assets/images/project_logo.png', // Ganti dengan path logo PKDI Anda
+                                height: 24,
                               ),
-                              SizedBox(width: 50), // Spasi antara logo PKDI dan tombol
-                              ElevatedButton.icon(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.red,
-                                  minimumSize: Size(140, 40), // Ukuran tombol lebih kecil
-                                ),
-                                onPressed: () {
-                                  // Aksi untuk tombol 'Tentang Kami'
-                                },
-                                icon: Image.asset(
-                                  'assets/images/project_logo.png', // Ganti dengan path logo PKDI Anda
-                                  height: 24,
-                                ),
-                                label: Text('Tentang Kami', style: kSubtitle1.copyWith(
+                              SizedBox(width: 5),
+                              Text(
+                                'PKDI',
+                                style: kBody1.copyWith(
                                   color: kBgWhite,
-                                )),
+                                ),
                               ),
                             ],
                           ),
