@@ -34,25 +34,22 @@ class _BeritaPageState extends State<BeritaPage> {
                   height: 10,
                 ),
                 _listBeritaUtama(
-                    "https://images.unsplash.com/photo-1494537604714-7975224eea63?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
-                    "2 hari lalu",
-                    'Upaya Pemberdayaan Ekonomi: Program Pelatihan Keterampilan untuk Mengurangi Kemiskinan',
+                    "https://images.unsplash.com/photo-1542367787-4baf35f3037d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
+                    'Hak Asasi Manusia dan Kemiskinan: Memastikan Keadilan bagi Semua Warga Negara',
                     'Nasional'),
                 SizedBox(
                   height: 10,
                 ),
                 _listBeritaUtama(
-                    "https://images.unsplash.com/photo-1494537604714-7975224eea63?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
-                    "2 hari lalu",
-                    'Upaya Pemberdayaan Ekonomi: Program Pelatihan Keterampilan untuk Mengurangi Kemiskinan',
+                    "https://images.unsplash.com/photo-1600791582575-eb24559a3a5c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
+                    'Berkolaborasi dengan Sektor Swasta: Mendorong Pertumbuhan Ekonomi yang Inklusif',
                     'Nasional'),
                 SizedBox(
                   height: 10,
                 ),
                 _listBeritaUtama(
-                    "https://images.unsplash.com/photo-1494537604714-7975224eea63?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
-                    "2 hari lalu",
-                    'Upaya Pemberdayaan Ekonomi: Program Pelatihan Keterampilan untuk Mengurangi Kemiskinan',
+                    "https://images.unsplash.com/photo-1498876901188-b33aec70ea5d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
+                    'Kemiskinan dan Perubahan Sosial: Transformasi Menuju Masyarakat yang Adil dan Berkelanjutan',
                     'Nasional'),
                 SizedBox(
                   height: 30,
@@ -76,7 +73,6 @@ class _BeritaPageState extends State<BeritaPage> {
                     children: [
                       _listBeritaLainya(
                           "https://images.unsplash.com/photo-1494537604714-7975224eea63?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
-                          "2 hari lalu",
                           'Upaya Pemberdayaan Ekonomi: Program Pelatihan Keterampilan untuk Mengurangi Kemiskinan',
                           'Nasional'),
                       SizedBox(
@@ -84,7 +80,6 @@ class _BeritaPageState extends State<BeritaPage> {
                       ),
                       _listBeritaLainya(
                           "https://images.unsplash.com/photo-1549983885-5c9eeb881f44?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
-                          "2 hari lalu",
                           'Krisis Ekonomi Global Berdampak, Pemerintah Fokus pada Penanganan Kemiskinan',
                           'Nasional'),
                       SizedBox(
@@ -92,56 +87,21 @@ class _BeritaPageState extends State<BeritaPage> {
                       ),
                       _listBeritaLainya(
                           "https://images.unsplash.com/photo-1548472730-471d75f20ca1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
-                          "2 hari lalu",
                           'Mengatasi Kelaparan: Inisiatif Baru untuk Mengurangi Angka Kemiskinan',
                           'Nasional'),
                       SizedBox(
                         width: 15,
                       ),
                       _listBeritaLainya(
-                          "https://images.unsplash.com/photo-1548472730-471d75f20ca1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
-                          "2 hari lalu",
-                          'Mengatasi Kelaparan: Inisiatif Baru untuk Mengurangi Angka Kemiskinan',
+                          "https://images.unsplash.com/photo-1573288810105-cf416af9186d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
+                          'Dampak Pandemi Terhadap Kelas Menengah: Meningkatnya Angka Kemiskinan',
                           'Nasional'),
                       SizedBox(
                         width: 15,
                       ),
                       _listBeritaLainya(
-                          "https://images.unsplash.com/photo-1548472730-471d75f20ca1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
-                          "2 hari lalu",
-                          'Mengatasi Kelaparan: Inisiatif Baru untuk Mengurangi Angka Kemiskinan',
-                          'Nasional'),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      _listBeritaLainya(
-                          "https://images.unsplash.com/photo-1548472730-471d75f20ca1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
-                          "2 hari lalu",
-                          'Mengatasi Kelaparan: Inisiatif Baru untuk Mengurangi Angka Kemiskinan',
-                          'Nasional'),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      _listBeritaLainya(
-                          "https://images.unsplash.com/photo-1548472730-471d75f20ca1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
-                          "2 hari lalu",
-                          'Mengatasi Kelaparan: Inisiatif Baru untuk Mengurangi Angka Kemiskinan',
-                          'Nasional'),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      _listBeritaLainya(
-                          "https://images.unsplash.com/photo-1548472730-471d75f20ca1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
-                          "2 hari lalu",
-                          'Mengatasi Kelaparan: Inisiatif Baru untuk Mengurangi Angka Kemiskinan',
-                          'Nasional'),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      _listBeritaLainya(
-                          "https://images.unsplash.com/photo-1548472730-471d75f20ca1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
-                          "2 hari lalu",
-                          'Mengatasi Kelaparan: Inisiatif Baru untuk Mengurangi Angka Kemiskinan',
+                          "https://images.unsplash.com/photo-1473594659356-a404044aa2c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fHBvdmVydHl8ZW58MHx8MHx8fDA%3D",
+                          'Masyarakat Pedesaan Terpinggirkan, Solusi untuk Mengatasi Kemiskinan Rural',
                           'Nasional'),
                     ],
                   ),
@@ -156,7 +116,7 @@ class _BeritaPageState extends State<BeritaPage> {
   }
 
   Widget _listBeritaUtama(
-      String image, String added, String title, String category) {
+      String image, String title, String category) {
     return Container(
       width: MediaQuery.of(context).size.width,
       child: Column(
@@ -174,24 +134,11 @@ class _BeritaPageState extends State<BeritaPage> {
             ),
           ),
           Text(
-            added,
-            style: kBody2.copyWith(
-              color: kBgGray,
-            ),
-            textAlign: TextAlign.start,
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Text(
             title,
             style: kBody2.copyWith(
               color: kBgBlack,
             ),
             textAlign: TextAlign.start,
-          ),
-          SizedBox(
-            height: 5,
           ),
           Text(
             category,
@@ -206,7 +153,7 @@ class _BeritaPageState extends State<BeritaPage> {
   }
 
   Widget _listBeritaLainya(
-      String image, String added, String title, String category) {
+      String image, String title, String category) {
     return Container(
       width: 300,
       child: Column(
@@ -224,24 +171,11 @@ class _BeritaPageState extends State<BeritaPage> {
             ),
           ),
           Text(
-            added,
-            style: kBody2.copyWith(
-              color: kBgGray,
-            ),
-            textAlign: TextAlign.start,
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Text(
             title,
             style: kBody2.copyWith(
               color: kBgBlack,
             ),
             textAlign: TextAlign.start,
-          ),
-          SizedBox(
-            height: 5,
           ),
           Text(
             category,

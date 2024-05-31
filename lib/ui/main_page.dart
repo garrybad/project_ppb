@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:project_ppb/styles/colors.dart';
 import 'package:project_ppb/styles/text_style.dart';
+import 'package:project_ppb/ui/about_page.dart';
 import 'package:project_ppb/ui/berita_page.dart';
 import 'package:project_ppb/ui/donasi_page.dart';
 import 'package:project_ppb/ui/home_screen.dart';
 import 'package:project_ppb/ui/pemerintah_page.dart';
 import 'package:project_ppb/ui/profile_page.dart';
 import 'package:project_ppb/ui/statistik_page.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -23,7 +25,7 @@ class _MainPageState extends State<MainPage> {
     DonasiPage(),
     BeritaPage(),
     PemerintahPage(),
-    StatistikPage(),
+    AboutPage(),
     ProfilePage(),
   ];
 
@@ -86,10 +88,10 @@ class _MainPageState extends State<MainPage> {
                     color: _selectedIndex == 3 ? kBgBlue : kDarkGray),
                 label: 'Pemerintah'),
             BottomNavigationBarItem(
-                icon: Image.asset('assets/icons/statistik.png',
+                icon: Image.asset('assets/icons/about.png',
                     width: 24,
                     color: _selectedIndex == 4 ? kBgBlue : kDarkGray),
-                label: 'Statistik'),
+                label: 'About'),
             BottomNavigationBarItem(
                 icon: Image.asset('assets/icons/profile.png',
                     width: 24,

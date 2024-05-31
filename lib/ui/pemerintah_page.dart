@@ -29,37 +29,37 @@ class _PemerintahPageState extends State<PemerintahPage> {
             'Pendidikan Inklusif',
             'Meningkatkan akses dan kualitas pendidikan untuk semua, dengan fokus pada anak-anak dari keluarga miskin. Program beasiswa, sekolah gratis, dan pelatihan keterampilan dapat membantu meningkatkan kemampuan masyarakat untuk bersaing di pasar kerja.',
           ),
-          SizedBox(height: 16.0), // Add spacing between items
+          SizedBox(height: 15.0), // Add spacing between items
           _buildListItem(
             'assets/images/pemberdayaan.png', // Replace with your image
             'Pemberdayaan Wanita',
             'Memberikan kesempatan yang setara untuk perempuan di berbagai bidang, termasuk pendidikan dan pekerjaan, sehingga mereka yang memiliki potensi besar untuk meningkatkan kesejahteraan keluarga dan masyarakat.',
           ),
-          SizedBox(height: 16.0), // Add spacing between items
+          SizedBox(height: 15.0), // Add spacing between items
           _buildListItem(
             'assets/images/pertanian.png', // Replace with your image
             'Pertanian dan Pangan',
             'Mendukung pertanian berkelanjutan dan ketahanan pangan dengan memberikan bantuan kepada petani, termasuk penyediaan pelatihan, teknologi, dan akses ke pasar bagi petani.',
           ),
-          SizedBox(height: 16.0), // Add spacing between items
+          SizedBox(height: 15.0), // Add spacing between items
           _buildListItem(
             'assets/images/infrastruktur.png', // Replace with your image
             'Infrastruktur dan Akses Pelayanan Dasar',
             'Meningkatkan infrastruktur dasar seperti jalan, air bersih, dan sanitasi. Ini dapat meningkatkan akses masyarakat terhadap layanan dasar dan menciptakan kondisi untuk pertumbuhan ekonomi lokal.',
           ),
-          SizedBox(height: 16.0), // Add spacing between items
+          SizedBox(height: 15.0), // Add spacing between items
           _buildListItem(
             'assets/images/pengembangan.png', // Replace with your image
             'Pengembangan Keterampilan dan Pelatihan',
             'Menyediakan pelatihan keterampilan dan pendidikan teknis kepada masyarakat agar mereka memiliki keterampilan yang sesuai dengan tuntutan pasar kerja. Ini dapat membantu memperluas peluang pekerjaan dan penghasilan.',
           ),
-          SizedBox(height: 16.0), // Add spacing between items
+          SizedBox(height: 15.0), // Add spacing between items
           _buildListItem(
             'assets/images/kesehatan.png', // Replace with your image
             'Akses ke Layanan Kesehatan',
             'Meningkatkan akses ke layanan kesehatan yang terjangkau dan berkualitas, dengan fokus pada pencegahan penyakit dan peningkatan kesehatan ibu dan anak. Program asuransi kesehatan yang terjangkau juga dapat membantu meringankan beban biaya kesehatan.',
           ),
-          SizedBox(height: 16.0), // Add spacing between items
+          SizedBox(height: 15.0), // Add spacing between items
           _buildListItem(
             'assets/images/bansos.png', // Replace with your image
             'Program Bantuan Sosial yang Efektif',

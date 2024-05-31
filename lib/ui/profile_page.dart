@@ -19,25 +19,34 @@ class ProfilePage extends StatelessWidget {
       //   ),
       // ),
       body: Container(
-        padding: EdgeInsets.only(top: 100),
+        // padding: EdgeInsets.only(top: 100),
         color: kBgBlue, // Warna latar belakang biru
-        child: Column(
+        child: ListView(
           children: [
-            CircleAvatar(
-              radius: 100,
-              backgroundImage: AssetImage('assets/images/people.png',), // Ganti dengan gambar profil Anda
-            ),
-            // SizedBox(height: 20),
-            Text(
-              'Halo, Tegar Aji',
-              style: kHeading5.copyWith(
-                color: kBgWhite,
-              ),
-            ),
-            Text(
-              'Mari Mensejahterahkan Masyarakat',
-              style: kSubtitle1.copyWith(
-                color: kGrey,
+            Center(
+              child: Container(
+                margin: EdgeInsets.only(top: 50, bottom: 50),
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundImage: AssetImage('assets/images/people.png',), // Ganti dengan gambar profil Anda
+                    ),
+                    // SizedBox(height: 20),
+                    Text(
+                      'Halo, Tegar Aji',
+                      style: kHeading5.copyWith(
+                        color: kBgWhite,
+                      ),
+                    ),
+                    Text(
+                      'Mari Mensejahterahkan Masyarakat',
+                      style: kSubtitle1.copyWith(
+                        color: kGrey,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             Spacer(),

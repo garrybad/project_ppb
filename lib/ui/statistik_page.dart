@@ -20,6 +20,6 @@ class _StatistikPageState extends State<StatistikPage> {
               color: Color(0xff3D4DE0)),
         ),
       ),
-    );;
+    );
   }
 }

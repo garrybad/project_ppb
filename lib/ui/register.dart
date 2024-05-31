@@ -51,6 +51,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           color: kBgBlue,
           width: double.infinity,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 height: MediaQuery.of(context).size.height * 0.5,
@@ -67,7 +68,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
               ),
-              Expanded(child:Container()),
+              // Expanded(child:Container()),
               Container(
                 decoration: BoxDecoration(
                     color: kBgWhite,
@@ -92,17 +93,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 40,
-                    ),
                     Text(
                       "E-mail",
                       style: kSubtitle1.copyWith(
                         color: kBgBlack,
                       ),
-                    ),
-                    SizedBox(
-                      height: 10,
                     ),
                     TextFormField(
                       controller: emailEdc,
@@ -118,17 +113,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         contentPadding: EdgeInsets.symmetric(horizontal: 20.0),
                       ),
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
                     Text(
                       "Password",
                       style: kSubtitle1.copyWith(
                         color: kBgBlack,
                       ),
-                    ),
-                    SizedBox(
-                      height: 10,
                     ),
                     TextFormField(
                       controller: passEdc,
@@ -159,7 +148,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       obscureText: !passInvisible,
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 10,
                     ),
                     Container(
                       width: double.infinity,
@@ -171,20 +160,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 .register(email: emailEdc.text, password: passEdc.text);
                           },
                           style: ElevatedButton.styleFrom(
-                              padding: EdgeInsets.all(20),
+                              padding: EdgeInsets.all(10),
                               backgroundColor: kBgBlue,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(50))),
                           child: Text(
-                            "Login",
+                            "Register",
                             style: kHeading6.copyWith(
                                 color: kBgWhite,
                                 fontWeight: FontWeight.w600
                             ),
                           )),
-                    ),
-                    SizedBox(
-                      height: 20,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -205,9 +191,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ),
                             ))
                       ],
-                    ),
-                    SizedBox(
-                      height: 20,
                     ),
                   ],
                 ),

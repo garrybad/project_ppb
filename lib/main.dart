@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:project_ppb/ui/home_screen.dart';
 import 'package:project_ppb/ui/login.dart';
+import 'package:project_ppb/ui/main_page.dart';
 import 'firebase_options.dart';
 import 'package:project_ppb/ui/splash.dart';
 import 'package:project_ppb/utils/routes.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => RegisterCubit())
       ],
       child: MaterialApp(
-        title: "Praktikum 9",
+        title: "Project PPB",
         debugShowCheckedModeBanner: false,
         navigatorKey: NAV_KEY,
         onGenerateRoute: generateRoute,
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const CircularProgressIndicator();
             } else if (snapshot.hasData) {
-              return HomeScreen();
+              return MainPage();
             } else if (snapshot.hasError) {
               return const Center(
                 child: Text('Something went wrong'),
